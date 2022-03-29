@@ -25,4 +25,5 @@
     <string name="apps">Todo App</string>
     <string name="psubmit">Submit</string>
     <string name="plogout">Logout</string>
+    <string name="name">username</string>
 </resources>

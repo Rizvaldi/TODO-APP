@@ -11,11 +11,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import java.security.Key;
 import java.util.zip.Inflater;
 
 public class ActivityLogin extends AppCompatActivity {
@@ -23,6 +25,7 @@ public class ActivityLogin extends AppCompatActivity {
     EditText edttask, edtjenis, edttime;
     FloatingActionButton fab;
     String task, jenis, time;
+    TextView username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +35,12 @@ public class ActivityLogin extends AppCompatActivity {
         edttask = findViewById(R.id.edtask);
         edtjenis = findViewById(R.id.edtjtask);
         edttime = findViewById(R.id.edtltask);
+        username = findViewById(R.id.tusername);
+
+        Bundle bundle = getIntent().getExtras();
+
+        String user = bundle.getString("a");
+        username.setText(user);
 
         fab = findViewById(R.id.fbutton2);
 
